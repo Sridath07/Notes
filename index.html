@@ -1,0 +1,73 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NoteVault India - Premium Study Notes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Identity Services -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <!-- Mammoth for DOCX to HTML conversion -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Roboto:wght@400;500&display=swap');
+        body { font-family: 'Inter', sans-serif; margin: 0; padding: 0; }
+        .no-select { user-select: none; -webkit-user-select: none; -ms-user-select: none; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #888; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #555; }
+        
+        @media print {
+            body { display: none !important; }
+        }
+
+        .secure-blur {
+            filter: blur(20px);
+            transition: filter 0.3s ease;
+        }
+        
+        .docx-content {
+            font-size: 16px;
+            color: #1a1a1a;
+            white-space: pre-wrap;
+        }
+        .docx-content h1 { font-size: 2.25em; font-weight: 800; margin-bottom: 0.75em; border-bottom: 2px solid #eee; padding-bottom: 0.3em; }
+        .docx-content h2 { font-size: 1.75em; font-weight: 700; margin-bottom: 0.6em; margin-top: 1.2em; }
+        .docx-content p { margin-bottom: 1.2em; line-height: 1.7; }
+        .docx-content table { border-collapse: collapse; width: 100%; margin-bottom: 1.5em; overflow-x: auto; display: block; }
+        .docx-content td, .docx-content th { border: 1px solid #d1d5db; padding: 12px; min-width: 100px; }
+        .docx-content th { background-color: #f9fafb; font-weight: 600; }
+        .docx-content img { max-width: 100%; height: auto; border-radius: 8px; margin: 1.5em auto; display: block; box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1); }
+        
+        .docx-content pre, .docx-content code {
+            font-family: 'JetBrains Mono', monospace;
+            background: #f8fafc;
+            padding: 0.2em 0.4em;
+            border-radius: 4px;
+            font-size: 0.9em;
+            color: #475569;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@19.2.3",
+    "react-dom": "https://esm.sh/react-dom@19.2.3",
+    "react-dom/client": "https://esm.sh/react-dom@19.2.3/client",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="bg-gray-50 text-gray-900">
+    <div id="root"></div>
+    <!-- We use type="module" to allow ES6 imports -->
+    <script type="module" src="./index.tsx"></script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
